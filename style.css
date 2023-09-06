@@ -1,0 +1,35 @@
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: blue;
+    justify-content: space-around
+}
+
+
+.header{
+    background-color: green;
+    align-self: center;
+}
+.texto{
+    background-color: orange;
+    align-self: center;
+}
+.autenticacion{
+    background-color: purple;
+    align-self: center;
+}
+.imagen{
+    background-color: grey;
+    align-self: center;
+}
+.iconos{
+    background-color: red;
+    align-self: center;
+}
+.cr{
+    background-color: brown;
+    align-self: center;
+}
