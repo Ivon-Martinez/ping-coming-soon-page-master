@@ -1,24 +1,33 @@
 
+
 .container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin: 5%;
+
+
+    
 }
 .header{
     align-self: center;
+
 }
+
 .texto1{
     align-self: center;
+
+    
 }
 h1{
     font-family: system-ui;
     font-size: 305%;
     font-weight: 350;
-    height: 30px;
+    /*height: 30px;*/
     letter-spacing: 1px;
 }
 h2{
+    margin-top: -15px;
     font-size: 130%;
     font-weight: 100;
     text-align: center;
@@ -26,7 +35,7 @@ h2{
     font-family: system-ui;
 }
 .autenticacion{
-    margin-top: 18px;
+    margin-top: 30px;
     height: 150px;
     align-self: center;
     width: 655px;
@@ -43,11 +52,11 @@ input{
     -webkit-text-fill-color: rgba(128, 128, 128, 0.422);
     
 }
-/*
-input:active{
-    border-color: rgb(214, 213, 213);
-    border-width: thin;
-}*/
+
+input:focus{
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    
+}
 
 
 button{
