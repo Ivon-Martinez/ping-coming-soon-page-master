@@ -41,10 +41,23 @@ h2{
 
 }
 .autenticacion{
-    margin-top: 30px;
-    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:stretch;
     align-self: center;
-    width: 655px;
+    height: 150px;
+    margin-bottom: 60px;
+   
+    /*
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+   
+    width: 655px;*/
 }
 input{
     border-radius: 30px;
@@ -61,19 +74,20 @@ input{
 
 input:focus{
     -webkit-text-fill-color: rgb(0, 0, 0);
-    
+    font-size: 25px;
 }
 
 button{
     border-radius: 30px;
+    font-size: 17px;
     padding: 17px;
     width:205px;
-    margin-left: 15px;
     color: white    ;
     background-color: rgb(82, 108, 255);
     border: none;
-    font-size: 17px;
     box-shadow: 1px 9px 8px 5px rgb(237, 240, 247);
+    margin-left: 15px;
+   
 }
 button:hover{
     opacity: 0.7;
@@ -141,10 +155,50 @@ img{
 
 }
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: 1000px)
 {
-.container {
+  /*  .container{
+        background-color: blue;
+    }
+*/
+.autenticacion {
+ 
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-items: stretch;
+   justify-content: flex-end;
+   padding-top: 62px;
+   margin-bottom: 110px;
+
+/* align-self: center;
+align-items: center;
+background-color: yellowgreen;
+
+height: 150px;*/
    
+}
+input{
+    width:500px;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    margin-bottom: 18px;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 60px;
+
+    }
+button{
+    width:540px;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+    margin-left: 20px;
+    padding: 23px;
+    border-radius: 60px;
 }
     
 }
