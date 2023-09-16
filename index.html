@@ -17,6 +17,9 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <script src=""https://code.jquery.com/jquery-3.5.0.min.js"">
+
+  </script>
 </head>
 <body>
   <div class="container">
@@ -34,13 +37,12 @@
     <div class="autenticacion">
       <form name="formulario" action="#">
         <input  type="text" name="email" id="email" placeholder="Your email address...">
-        <button type="submit" value="submit" onclick="validateEmail(document.formulario.email)">
+       <!-- <button type="submit" value="submit" onclick="validateEmail(document.formulario.email)">
           Notify Me
-        </button>
+        </button>-->
+        <button type='submit' id='validate'>Notify Me</button>
       </form>
-      <span>
       <p id="demo" class="demo"></p>
-    </span>
     </div>
     <div class="imagen">
       <img src="images/illustration-dashboard.png" alt="imagen" class="ima" >
@@ -65,28 +67,24 @@
   </footer>
 
   <script>
-    class mensajeError {
-      constructor(mensaje){
-      this.mensaje=mensaje;
-      }
+    function validateEmail(email) {
+      let res = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      return res.test(email);
     }
-  
-    const myMensaje=new mensajeError("Please provide a valid email");
-    
-    function validateEmail(emailId)
-    {
-      var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-      if(emailId.value.match(mailformat))
-      {document.formulario.text1.focus();
-      return true;
+    function validate() {
+      let result = $("#result");
+      let email = $("#email").val();
+      result.text("");
+      if(validateEmail(email)) {
+        result.text(email + " is valid");
+        result.css("color", "blue");
+      } else {
+        result.text(email + " is not valid");
+        result.css("color", "red");
       }
-      else{
-        document.getElementById("demo").innerHTML=myMensaje.mensaje;
-        return false;
-      }
-      
+      return false;
     }
-  
+    $("#validate").on("click", validate);
   </script>
 
 </body>
